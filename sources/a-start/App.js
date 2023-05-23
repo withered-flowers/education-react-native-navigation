@@ -5,7 +5,9 @@ import HomePage from "./screens/HomePage";
 import AnotherPage from "./screens/AnotherPage";
 import ListCountry from "./screens/ListCountry";
 import DetailedCountry from "./screens/DetailedCountry";
+import ListColors from "./screens/ListColors";
 import ListAnime from "./screens/ListAnime";
+import DetailedColors from "./screens/DetailedColors";
 
 export default function App() {
   return (
@@ -13,6 +15,8 @@ export default function App() {
       <HomePage />
       {/* <AnotherPage /> */}
       {/* <ListCountry /> */}
+      {/* <ListColors /> */}
+      {/* <DetailedColors colorId={1} /> */}
       {/* <DetailedCountry officialName={"Iceland"} /> */}
       {/* <ListAnime /> */}
     </Provider>

@@ -2,6 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 
 import { restcountryApi } from "../services/restcountry";
 import { kitsuApi } from "../services/kitsu";
+import { reqresinApi } from "../services/reqresin";
 
 // Contoh di sini menggunakan configureStore (Redux Toolkit)
 // Bukan createStore (legacy / Redux standard, non-toolkit)
@@ -11,6 +12,7 @@ const store = configureStore({
     // yang sudah dibuatkan secara otomatis oleh RTK Query (createApi)
     [restcountryApi.reducerPath]: restcountryApi.reducer,
     [kitsuApi.reducerPath]: kitsuApi.reducer,
+    [reqresinApi.reducerPath]: reqresinApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
@@ -21,7 +23,8 @@ const store = configureStore({
       // Di sini akan menggabungkan middleware yang lagi-lagi sudah dibuatkan
       // oleh RTK Query (createApi)
       .concat(restcountryApi.middleware)
-      .concat(kitsuApi.middleware),
+      .concat(kitsuApi.middleware)
+      .concat(reqresinApi.middleware),
 });
 
 export default store;

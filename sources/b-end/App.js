@@ -13,6 +13,8 @@ import AnotherPage from "./screens/AnotherPage";
 import ListCountry from "./screens/ListCountry";
 import DetailedCountry from "./screens/DetailedCountry";
 import ListAnime from "./screens/ListAnime";
+import ListColors from "./screens/ListColors";
+import DetailedColors from "./screens/DetailedColors";
 
 // createNativeStackNavigator adalah sebuah fungsi yang akan mengembalikan suatu Component
 // Umumnya bernama Stack (ingat, ini Component, jadi PascalCase)
@@ -27,6 +29,15 @@ const StackAnime = () => {
     <Stack.Navigator>
       <Stack.Screen name="List Country" component={ListCountry} />
       <Stack.Screen name="Detailed Country" component={DetailedCountry} />
+    </Stack.Navigator>
+  );
+};
+
+const StackColors = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="List Colors" component={ListColors} />
+      <Stack.Screen name="Detailed Color" component={DetailedColors} />
     </Stack.Navigator>
   );
 };
@@ -55,6 +66,8 @@ export default function App() {
                 iconName = focused ? "cloud" : "cloud-outline";
               } else if (route.name === "Countries") {
                 iconName = focused ? "map" : "map-outline";
+              } else if (route.name === "Colors") {
+                iconName = focused ? "color-palette" : "color-palette-outline";
               }
 
               return <Ionicons name={iconName} size={size} color={color} />;
@@ -71,6 +84,13 @@ export default function App() {
             }}
             name="Countries"
             component={StackAnime}
+          />
+          <Tab.Screen
+            options={{
+              headerShown: false,
+            }}
+            name="Colors"
+            component={StackColors}
           />
         </Tab.Navigator>
 

@@ -13,13 +13,13 @@ const queryClient = new QueryClient();
 export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      {/* <HomePage /> */}
+      <HomePage />
       {/* <AnotherPage /> */}
       {/* <ListCountry /> */}
       {/* <ListColors /> */}
       {/* <DetailedColors colorId={1} /> */}
       {/* <DetailedCountry officialName={"Iceland"} /> */}
-      <ListAnime />
+      {/* <ListAnime /> */}
     </QueryClientProvider>
   );
 }

@@ -10,15 +10,15 @@ import ListColors from "./screens/ListColors";
 import ListCountry from "./screens/ListCountry";
 
 export default function App() {
-	return (
-		<Provider store={store}>
-			<HomePage />
-			{/* <AnotherPage /> */}
-			{/* <ListCountry /> */}
-			{/* <ListColors /> */}
-			{/* <DetailedColors colorId={1} /> */}
-			{/* <DetailedCountry officialName={"Iceland"} /> */}
-			{/* <ListAnime /> */}
-		</Provider>
-	);
+  return (
+    <Provider store={store}>
+      <HomePage />
+      {/* <AnotherPage /> */}
+      {/* <ListCountry /> */}
+      {/* <ListColors /> */}
+      {/* <DetailedColors colorId={1} /> */}
+      {/* <DetailedCountry officialName={"Iceland"} /> */}
+      {/* <ListAnime /> */}
+    </Provider>
+  );
 }

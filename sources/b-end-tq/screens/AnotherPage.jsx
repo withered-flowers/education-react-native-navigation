@@ -1,8 +1,11 @@
 import { StatusBar } from "expo-status-bar";
 import { Button, StyleSheet, Text, View } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 // ? Terima data tambahan dari si Home, via props namanya route
-const AnotherPage = ({ route, navigation }) => {
+const AnotherPage = ({ route }) => {
+  const navigation = useNavigation();
+
   // ? Baca data yang diterima via "params"
   // ? Pasti adalah suatu Object
   const { dataTambahan } = route.params;

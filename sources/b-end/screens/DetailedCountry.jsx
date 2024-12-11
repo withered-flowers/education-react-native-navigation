@@ -1,10 +1,13 @@
 import { StyleSheet, Image, TouchableOpacity, Text } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import { useGetCountriesByNameQuery } from "../services/restcountry";
 import SpecifiedView from "../components/SpecifiedView";
 
 // Di sini untuk bisa menerima parameter, maka cukup menerima sebuah props dengan nama "route"
 // Karena di sini kita juga ingin bisa kembali ke halaman sebelumnya, kita bisa menggunakan navigation
-const DetailedCountry = ({ route, navigation }) => {
+const DetailedCountry = ({ route }) => {
+  const navigation = useNavigation();
+
   // Di dalam route, ini adalah sebuah Object, di mana salah satu propsnya adalah "params"
 
   // Karena params bisa banyak, umumnya dalam object, jadi bisa di-destructuring

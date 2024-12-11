@@ -24,7 +24,7 @@ const Stack = createNativeStackNavigator();
 // Umumnya bernama Tab (ingat sekali ini, ini Component, jadi PascalCase)
 const Tab = createBottomTabNavigator();
 
-const StackAnime = () => {
+const StackCountry = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen name="List Country" component={ListCountry} />
@@ -81,7 +81,7 @@ export default function App() {
               headerShown: false,
             }}
             name="Countries"
-            component={StackAnime}
+            component={StackCountry}
           />
           <Tab.Screen
             options={{

@@ -1,16 +1,13 @@
-import {
-  FlatList,
-  StatusBar,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-} from "react-native";
+import { FlatList, StatusBar, StyleSheet, Text, TouchableOpacity } from "react-native";
 import SpecifiedView from "../components/SpecifiedView";
 
+import { useNavigation } from "@react-navigation/native";
 import { useQuery } from "@tanstack/react-query";
 import { getAllCountries } from "../services/restcountry";
 
-const ListCountry = ({ navigation }) => {
+const ListCountry = () => {
+  const navigation = useNavigation();
+
   const { data, isPending: isLoading } = useQuery({
     queryKey: ["countries"],
     queryFn: getAllCountries,
@@ -43,8 +40,7 @@ const ListCountry = ({ navigation }) => {
             onPress={() => textOnPress(item.name.official)}
           >
             <Text style={styles.text}>
-              {item.name.official} - ({item.latlng[0].toFixed(2)},{" "}
-              {item.latlng[1].toFixed(2)})
+              {item.name.official} - ({item.latlng[0].toFixed(2)}, {item.latlng[1].toFixed(2)})
             </Text>
           </TouchableOpacity>
         )}

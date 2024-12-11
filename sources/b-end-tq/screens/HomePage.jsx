@@ -1,8 +1,14 @@
+import { useNavigation } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
 import { Button, StyleSheet, Text, View } from "react-native";
 
+// ? [CARA LAMA]
 // ? Props navigation di"suntik" dari Stack.Screen
-const HomePage = ({ navigation }) => {
+const HomePage = () => {
+  // ? [CARA BARU]
+  // ? Gunakan useNavigation() dari "@react-navigation/native" untuk mendapatkan navigation
+  const navigation = useNavigation();
+
   const buttonOnPressHandler = () => {
     // ? Buat pindah halaman gimana caranya?
     // ? Dengan menggunakan navigation.navigate("nama-dari-screen")

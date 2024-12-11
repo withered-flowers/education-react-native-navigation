@@ -73,11 +73,9 @@ export default function App() {
               let iconName;
 
               if (route.name === "Countries") {
-                iconName = focused
-                  ? "ios-information-circle"
-                  : "ios-information-circle-outline";
+                iconName = focused ? "information-circle" : "information-circle-outline";
               } else if (route.name === "Colors") {
-                iconName = focused ? "ios-list" : "ios-list-outline";
+                iconName = focused ? "list" : "list-outline";
               }
 
               // You can return any component that you like here!
